@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | AI Engineer Portfolio</title>
+  <meta name="description" content="Portfolio for an AI Engineer featuring projects, skills, and contact information." />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111827;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #22d3ee;
+      --accent-2: #818cf8;
+      --card: #1f2937;
+      --border: #334155;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at 20% 20%, #172554 0%, var(--bg) 40%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 4rem 0 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.4px;
+    }
+
+    .links a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 1rem;
+      transition: color 0.2s ease;
+    }
+
+    .links a:hover { color: var(--accent); }
+
+    .hero {
+      display: grid;
+      gap: 1rem;
+      padding: 4rem 0;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(34, 211, 238, 0.15);
+      color: var(--accent);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      width: fit-content;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.2;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 700px;
+      font-size: 1.05rem;
+    }
+
+    .cta {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      border: 1px solid transparent;
+      border-radius: 10px;
+      padding: 0.65rem 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform .15s ease, opacity .15s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(120deg, var(--accent), var(--accent-2));
+      color: #020617;
+    }
+
+    .btn-secondary {
+      border-color: var(--border);
+      color: var(--text);
+      background: transparent;
+    }
+
+    .btn:hover { transform: translateY(-1px); opacity: 0.95; }
+
+    section { padding: 2rem 0; }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: rgba(31, 41, 55, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .card h3 { margin-top: 0; }
+    .card p { color: var(--muted); margin-bottom: 0.75rem; }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .pill {
+      font-size: 0.85rem;
+      background: #0b1220;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.25rem 0.55rem;
+      color: #cbd5e1;
+    }
+
+    footer {
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Your Name</div>
+        <div class="links">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="hero">
+        <span class="tag">AI Engineer Portfolio</span>
+        <h1>I build practical AI products that solve real business problems.</h1>
+        <p>
+          I design and ship production-ready AI systems, from retrieval-augmented generation apps to automation workflows.
+          This portfolio highlights selected projects, core technical skills, and ways to connect.
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-secondary" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>RAG Knowledge Assistant</h3>
+          <p>Built a domain-specific assistant with document retrieval, citation grounding, and analytics dashboard.</p>
+          <div class="pills">
+            <span class="pill">Python</span><span class="pill">LangChain</span><span class="pill">Vector DB</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>AI Support Copilot</h3>
+          <p>Reduced first-response time by integrating an LLM copilot into support tooling with safe-guarded actions.</p>
+          <div class="pills">
+            <span class="pill">TypeScript</span><span class="pill">Node.js</span><span class="pill">OpenAI API</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Workflow Automation Engine</h3>
+          <p>Automated repetitive business tasks with trigger-based pipelines, model calls, and human-in-the-loop approval.</p>
+          <div class="pills">
+            <span class="pill">FastAPI</span><span class="pill">PostgreSQL</span><span class="pill">Docker</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>AI/ML</h3>
+          <p>LLM app development, prompt engineering, evaluation pipelines, embeddings, and RAG architecture.</p>
+        </div>
+        <div class="card">
+          <h3>Backend & Infra</h3>
+          <p>API development, scalable services, caching, async workers, CI/CD, and containerized deployment.</p>
+        </div>
+        <div class="card">
+          <h3>Product Delivery</h3>
+          <p>Requirements discovery, rapid prototyping, iteration with stakeholders, and production hardening.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Interested in collaborating or hiring? Reach out via email or connect on LinkedIn/GitHub.</p>
+        <div class="pills">
+          <span class="pill">email@example.com</span>
+          <span class="pill">linkedin.com/in/your-profile</span>
+          <span class="pill">github.com/your-username</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Your Name. Built with HTML/CSS.</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
